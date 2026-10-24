@@ -1,0 +1,128 @@
+
+/* ===== Réinitialisation ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f7f4ff;
+    color: #35284f;
+    padding: 40px 24px;
+    min-height: 100vh;
+}
+
+/* ===== Conteneur principal ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(111, 66, 193, 0.10);
+    border: 1px solid #eee7ff;
+}
+
+/* ===== Titre ===== */
+h1 {
+    color: #7650c8;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #8c82a5;
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+/* ===== En-tête du tableau ===== */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #eee7ff;
+    border-radius: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background: #ffffff;
+}
+
+thead {
+    background: #eee6ff;
+}
+
+th {
+    color: #6541a5;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 17px 16px;
+    white-space: nowrap;
+    border-bottom: 2px solid #dfd0ff;
+}
+
+td {
+    padding: 16px;
+    font-size: 14px;
+    color: #514763;
+    border-bottom: 1px solid #f0ebf8;
+}
+
+/* ===== Lignes alternées ===== */
+tbody tr:nth-child(even) {
+    background: #fcfaff;
+}
+
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f1eaff;
+}
+
+/* ===== Première colonne : ID ===== */
+tbody td:first-child {
+    color: #8054cc;
+    font-weight: 700;
+}
+
+/* ===== Dernière ligne sans bordure ===== */
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== Tableau vide ===== */
+.empty-message {
+    text-align: center;
+    padding: 30px;
+    color: #9386aa;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .container {
+        padding: 20px 14px;
+        border-radius: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    th,
+    td {
+        padding: 12px;
+        font-size: 13px;
+    }
+}

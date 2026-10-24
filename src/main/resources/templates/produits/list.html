@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gestion de stock de pharmacie</title>
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Gestion de stock de pharmacie</h1>
+        <p class="subtitle">
+            Consultez la liste des produits disponibles dans votre pharmacie.
+        </p>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nom</th>
+                        <th>Description</th>
+                        <th>Prix</th>
+                        <th>Code-barres</th>
+                        <th>Date d'expiration</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr th:each="produit : ${produits}">
+                        <td th:text="${produit.id}"></td>
+                        <td th:text="${produit.nom}"></td>
+                        <td th:text="${produit.description}"></td>
+                        <td th:text="${produit.prix}"></td>
+                        <td th:text="${produit.codeBarre}"></td>
+                        <td th:text="${produit.dateExpiration}"></td>
+                    </tr>
+
+                    <tr th:if="${#lists.isEmpty(produits)}">
+                        <td colspan="6" class="empty-message">
+                            Aucun produit disponible pour le moment.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>
